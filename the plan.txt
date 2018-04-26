@@ -1,0 +1,17 @@
+I'm gonna call them planets instead of objects or particles cause that's more fun.
+
+Plotted on a billion by billion km plot
+
+The planets are inputted through a file with one planet per line and its initial properties (mass, x position, y position, x velocity, y velocity, (type)) separated by spaces
+mass in kg, position in km, velocity in km/s
+
+Ex:
+1.989e30 5e8 5e8 0 0 star
+5.972e24 5e8 6.496e8 30 0 planet
+
+(type) is a property I might add later if I have more time. It's more for fun to distinguish between stars and planets and stuff.
+
+This input will then be stored in a list like so
+[[1.989e30, 5e8, 5e8, 0, 0, "star"], [5.972e24, 5e8, 6.496e8, 30, 0, "planet"]]
+
+The function is also run with the ∆t and timestep as argparse arguments. Then for each timestep until ∆t is reached, the new positions of the planets are calculated by plugging into the gravity formula thing for each pair of planets to determine the total force acting on each planet and then applying that force to the object for timestep seconds.
